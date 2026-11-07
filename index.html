@@ -132,8 +132,8 @@ body{overflow-x:clip}
 .w>span{display:inline-block}
 .js .w>span{transition:transform 1.05s var(--ease) calc(var(--i)*70ms + 150ms)}
 .js:not(.ready) .w>span{transform:translateY(112%)}
-.js .fade{transition:opacity 1s ease var(--d,0s)}
-.js:not(.ready) .fade{opacity:0}
+.js .enter{transition:opacity 1s ease var(--d,0s)}
+.js:not(.ready) .enter{opacity:0}
 
 /* indikator menu */
 .navbar-nav{position:relative}
@@ -176,7 +176,7 @@ body{overflow-x:clip}
 .js .steps li.fin.reached .n{background:#1F9D6B;border-color:#1F9D6B}
 
 @media(prefers-reduced-motion:reduce){
-  .js .fade,.js .w>span,.js .navbar,.nav-ind,.collapsing,.accordion-button::after{transition:none!important}
+  .js .enter,.js .w>span,.js .navbar,.nav-ind,.collapsing,.accordion-button::after{transition:none!important}
   .typing i{animation:none}.msg.on .status{animation:none}
 }
 </style>
@@ -204,19 +204,19 @@ body{overflow-x:clip}
     <div class="row align-items-center g-5">
       <div class="col-lg-6">
         <h1>Solusi digital lengkap dalam satu tempat.</h1>
-        <p class="lead mb-4 fade" style="--d:.55s">Temukan produk digital berkualitas dengan harga terbaik, transaksi aman, dan pelayanan profesional. Semua pemesanan diproses lewat tiket privat di server Discord kami.</p>
-        <div class="d-flex flex-wrap gap-3 mb-4 fade" style="--d:.7s">
+        <p class="lead mb-4 enter" style="--d:.55s">Temukan produk digital berkualitas dengan harga terbaik, transaksi aman, dan pelayanan profesional. Semua pemesanan diproses lewat tiket privat di server Discord kami.</p>
+        <div class="d-flex flex-wrap gap-3 mb-4 enter" style="--d:.7s">
           <a class="btn btn-ac btn-lg" href="https://discord.gg/DmPWsAWqkR" target="_blank" rel="noopener"><i class="fa-brands fa-discord me-2"></i>Gabung server Discord</a>
           <a class="btn btn-line btn-lg" href="#cara-beli">Lihat cara beli</a>
         </div>
-        <div class="meta d-flex flex-wrap gap-4 fade" style="--d:.85s">
+        <div class="meta d-flex flex-wrap gap-4 enter" style="--d:.85s">
           <span><i class="fa-solid fa-bolt"></i>Order otomatis</span>
           <span><i class="fa-solid fa-lock"></i>Tiket privat</span>
           <span><i class="fa-solid fa-wallet"></i>Bayar via DANA</span>
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="ticket fade" style="--d:.6s" id="ticket" aria-label="Contoh alur tiket pemesanan">
+        <div class="ticket enter" style="--d:.6s" id="ticket" aria-label="Contoh alur tiket pemesanan">
           <div class="ticket-bar"><i class="fa-solid fa-hashtag"></i>tiket-pesanan<small>Contoh tampilan</small></div>
           <div class="ticket-body">
             <div class="msg"><div class="av bot"><i class="fa-solid fa-robot"></i></div><div><b>Bot Toko Digital Kita</b><small>Baru saja</small><p>Pesanan Anda sudah dibuat. Silakan transfer lewat DANA sesuai nominal, lalu kirim bukti bayar di tiket ini.</p></div></div>
